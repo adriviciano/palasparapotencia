@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <h1>Contacto</h1>
+  <p>¿Tienes dudas, sugerencias o quieres colaborar con nosotros? Rellena el siguiente formulario:</p>
+
+  <form name="contacto" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contacto" />
+    <p>
+      <label>Nombre:<br />
+        <input type="text" name="nombre" required />
+      </label>
+    </p>
+    <p>
+      <label>Email:<br />
+        <input type="email" name="email" required />
+      </label>
+    </p>
+    <p>
+      <label>Mensaje:<br />
+        <textarea name="mensaje" required></textarea>
+      </label>
+    </p>
+    <p><button type="submit">Enviar</button></p>
+  </form>
+
+  <p>También puedes escribirnos directamente a <strong>hola@palasparapotencia.es</strong></p>
+</BaseLayout>
