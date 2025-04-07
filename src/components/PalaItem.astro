@@ -1,0 +1,37 @@
+---
+// props: nombre, resumen, precio, puntuacion, enlace, ruta, id
+const { nombre, resumen, precio, puntuacion, enlace, ruta, id } = Astro.props;
+---
+
+<section id={id} style="margin-bottom: 3rem;">
+  <h2>{nombre}</h2>
+  <p>{resumen}</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Potencia</th>
+        <th>Control</th>
+        <th>Manejabilidad</th>
+        <th>Punto dulce</th>
+        <th>Durabilidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{puntuacion.potencia}</td>
+        <td>{puntuacion.control}</td>
+        <td>{puntuacion.manejabilidad}</td>
+        <td>{puntuacion.puntoDulce}</td>
+        <td>{puntuacion.durabilidad}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Precio:</strong> {precio}</p>
+  <p>
+    <a href={enlace} target="_blank" rel="nofollow sponsored">🛒 Ver en Amazon</a>
+    &nbsp;|&nbsp;
+    <a href={ruta}>Ver análisis completo</a>
+  </p>
+</section>

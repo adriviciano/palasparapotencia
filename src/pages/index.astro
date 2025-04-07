@@ -1,13 +1,26 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import TablaComparativa from "../components/TablaComparativa.astro";
+import { palas } from "../data/palas.js";
+import PalaItem from "../components/PalaItem.astro";
 ---
 
 <BaseLayout>
-  <h1>Top 7 Mejores Palas de Pádel de Potencia 2025</h1>
-  <p>Bienvenido a la guía definitiva para dominar la pista con las palas más potentes del mercado.</p>
+  <h1>Top 10 Palas de Pádel de Potencia 2024/2025</h1>
 
-  <TablaComparativa />
+  <p>
+    Aquí tienes una selección cuidadosamente analizada de las mejores palas de potencia para esta temporada. Desde modelos elegidos por jugadores top como Galán, Coello o Paquito Navarro, hasta opciones menos conocidas pero brutales en rendimiento ofensivo.
+  </p>
 
-  <p>Haz clic en cada modelo para ver su análisis completo y opiniones.</p>
+  <h2>Índice</h2>
+  <ul>
+    {palas.map((pala) => (
+      <li><a href={`#${pala.id}`}>{pala.nombre}</a></li>
+    ))}
+  </ul>
+
+  <hr />
+
+  {palas.map((pala) => (
+    <PalaItem {...pala} />
+  ))}
 </BaseLayout>
