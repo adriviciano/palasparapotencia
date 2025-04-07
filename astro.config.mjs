@@ -1,8 +1,6 @@
-import { defineConfig } from 'astro/config';
-import github from '@astrojs/github';
+import { defineConfig } from 'astro/config'
 
 export default defineConfig({
-  output: 'static',
-  adapter: github(),
-  base: '/palasparapotencia/', // nombre del repo
-});
+  site: 'https://adriviciano.github.io',
+  base: 'palasparapotencia',
+})
