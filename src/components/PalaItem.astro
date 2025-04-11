@@ -1,11 +1,14 @@
 ---
 // props: nombre, resumen, precio, puntuacion, enlace, ruta, id
 const { nombre, resumen, precio, puntuacion, enlace, ruta, id } = Astro.props;
+import PalaCard from './PalaCard.jsx';
 ---
 
 <section id={id} style="margin-bottom: 3rem;">
   <h2>{nombre}</h2>
   <p>{resumen}</p>
+
+  <PalaCard nombre={nombre} enlace={enlace}/>
 
   <table>
     <thead>
