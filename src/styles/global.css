@@ -148,3 +148,27 @@ button:hover {
     padding: 1rem;
   }
 }
+
+.amazon-card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.btn-comprar {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-link);
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn-comprar:hover {
+  background-color: var(--color-link-hover);
+}
+

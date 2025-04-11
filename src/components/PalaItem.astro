@@ -1,14 +1,16 @@
 ---
-// props: nombre, resumen, precio, puntuacion, enlace, ruta, id
-const { nombre, resumen, precio, puntuacion, enlace, ruta, id } = Astro.props;
-import PalaCard from './PalaCard.jsx';
+const { nombre, resumen, precio, puntuacion, enlace, ruta, id, imageUrl } = Astro.props;
+import Product from './Product.jsx';
 ---
 
 <section id={id} style="margin-bottom: 3rem;">
-  <h2>{nombre}</h2>
-  <p>{resumen}</p>
-
-  <PalaCard nombre={nombre} enlace={enlace}/>
+  <Product
+    name={nombre}
+    price={precio}
+    url={enlace}
+    imageUrl={imageUrl}
+    description={resumen}
+  />
 
   <table>
     <thead>
@@ -31,10 +33,7 @@ import PalaCard from './PalaCard.jsx';
     </tbody>
   </table>
 
-  <p><strong>Precio:</strong> {precio}</p>
   <p>
-    <a href={enlace} target="_blank" rel="nofollow sponsored">🛒 Ver en Amazon</a>
-    &nbsp;|&nbsp;
     <a href={ruta}>Ver análisis completo</a>
   </p>
 </section>
