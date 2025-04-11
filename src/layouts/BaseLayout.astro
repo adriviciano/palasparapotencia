@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar.jsx";
 ---
 
 <html lang="es">
@@ -10,7 +10,7 @@ import Navbar from "../components/Navbar.astro";
     <title>Palas Para Potencia</title>
   </head>
   <body>
-    <Navbar />
+    <Navbar client:load />
     <main>
       <slot />
     </main>
