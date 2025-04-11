@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 export default function Navbar() {
@@ -12,11 +11,11 @@ export default function Navbar() {
         ☰
       </button>
       <ul className="nav-links">
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/palas">Palas</Link></li>
-        <li><Link to="/reviews">Reviews</Link></li>
-        <li><Link to="/faq">FAQ</Link></li>
-        <li><Link to="/contacto">Contacto</Link></li>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/palas">Palas</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contacto">Contacto</a></li>
       </ul>
     </nav>
   );
