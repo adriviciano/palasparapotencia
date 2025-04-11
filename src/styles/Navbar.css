@@ -1,71 +1,70 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #2c3457;
-    padding: 1rem 2rem;
-    color: #fff;
-    position: relative;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primario);
+  padding: 1rem 2rem;
+  color: #fff;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: var(--color-link);
+  transition: width 0.3s;
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
   .toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: #fff;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-  }
-  
-  .nav-links li a::after {
-    content: '';
     display: block;
-    height: 2px;
-    background: #64a2fc;
-    transition: width 0.3s;
-    width: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
     position: absolute;
-    bottom: -5px;
+    top: 100%;
     left: 0;
+    right: 0;
+    background-color: var(--color-primario);
+    display: none;
   }
-  
-  .nav-links li a:hover::after {
-    width: 100%;
+
+  .navbar.active .nav-links {
+    display: flex;
   }
-  
-  @media (max-width: 768px) {
-    .toggle {
-      display: block;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: #2c3457;
-      display: none;
-    }
-  
-    .navbar.active .nav-links {
-      display: flex;
-    }
-  }
-  
+}
