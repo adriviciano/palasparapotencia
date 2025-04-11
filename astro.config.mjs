@@ -1,6 +1,8 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 
 export default defineConfig({
-  site: 'https://adriviciano.github.io',
-  base: 'palasparapotencia',
-})
+  integrations: [react()],
+  output: 'static',
+  base: '/palasparapotencia/',
+});
